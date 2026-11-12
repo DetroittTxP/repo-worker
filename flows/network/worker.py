@@ -14,7 +14,7 @@ import primeflow
 
 def sync(ctx: primeflow.Context):
     site = (ctx.params or {}).get("site", "lab")
-    return ctx.task("sync", lambda c: {"team": "network", "site": site, "synced": True})
+    return ctx.task("sync", lambda c: {"team": "network", "site": site, "synced": True, "rev": 2})
 
 
 def healthcheck(ctx: primeflow.Context):
